@@ -2,6 +2,7 @@
 #include <fstream>
 
 using namespace std;
+
 class binOps
 {
     private:
