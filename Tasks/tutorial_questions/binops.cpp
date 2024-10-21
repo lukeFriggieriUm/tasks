@@ -1,4 +1,4 @@
-#include <iostream>
+ #include <iostream>
 #include <fstream>
 
 using namespace std;
@@ -46,6 +46,7 @@ class binOps
 
 
 int main(){ 
+    try{
     binOps* arr = new binOps[5];
 
     ofstream outFile;
@@ -68,4 +69,7 @@ int main(){
     }
 
     delete[] arr;
+    }catch(exception e1){
+        cout << "please enter a valid input" << endl;
+    }
 }
