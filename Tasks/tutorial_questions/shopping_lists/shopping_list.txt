@@ -1,0 +1,5 @@
+Electronics Headphones 55 22/10/24
+Clothing T-Shirt 20 Small
+Clothing cc 0 cc
+Clothing d 0 "/Users/lukefriggieri/Desktop/Notes/University/YR2/CPS2004/Code/Tasks/tutorial_questions/shopping_lists/"
+Clothing d 0 "/Users/lukefriggieri/Desktop/Notes/University/YR2/CPS2004/Code/Tasks/tutorial_questions/shopping_lists/"

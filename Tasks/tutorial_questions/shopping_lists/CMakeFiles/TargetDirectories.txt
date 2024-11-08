@@ -1,0 +1,4 @@
+/Users/lukefriggieri/Desktop/Notes/University/YR2/CPS2004/Code/Tasks/tutorial_questions/shopping_lists/CMakeFiles/shopping_items.dir
+/Users/lukefriggieri/Desktop/Notes/University/YR2/CPS2004/Code/Tasks/tutorial_questions/shopping_lists/CMakeFiles/binops.dir
+/Users/lukefriggieri/Desktop/Notes/University/YR2/CPS2004/Code/Tasks/tutorial_questions/shopping_lists/CMakeFiles/edit_cache.dir
+/Users/lukefriggieri/Desktop/Notes/University/YR2/CPS2004/Code/Tasks/tutorial_questions/shopping_lists/CMakeFiles/rebuild_cache.dir
