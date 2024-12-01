@@ -18,7 +18,6 @@ int main(){
    
     save(list, "shopping_list.txt");
 
-
     if (infile.is_open()) {
         unique_ptr<Item> item = nullptr;
         while (infile) {
