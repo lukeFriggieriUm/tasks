@@ -7,6 +7,7 @@ abstract class Item {
     public abstract void display();
     public abstract void persist(PrintWriter out);
     public abstract void input(Scanner scanner);
+    public abstract Item duplicate();
 }
 
 class Grocery extends Item {
@@ -52,6 +53,11 @@ class Grocery extends Item {
         System.out.print("Enter the price: ");
         price = scanner.nextFloat();
     }
+
+    @Override
+    public Item duplicate(){
+        return new Grocery(this.name, this.expiryDate, this.price);
+    }
 }
 
 class Electronics extends Item {
@@ -88,6 +94,11 @@ class Electronics extends Item {
         warranty = scanner.next();
         System.out.print("Enter the price: ");
         price = scanner.nextFloat();
+    }
+
+    @Override
+    public Item duplicate(){
+        return new Electronics(this.name,this.warranty,this.price);
     }
 }
 
@@ -127,6 +138,11 @@ class Clothing extends Item{
         System.out.print("Enter the price: ");
         price = scanner.nextFloat();
     }
+
+    @Override
+    public Item duplicate(){
+        return new Clothing(this.type,this.size,this.price);
+    }
 }
 
 class Book extends Item{
@@ -164,6 +180,11 @@ class Book extends Item{
         System.out.print("Enter the price: ");
         price = scanner.nextFloat();
     }
+
+    @Override
+    public Item duplicate(){
+        return new Book(this.name,this.genre,this.price);
+    }
 }
 
 class Toys extends Item {
@@ -200,6 +221,11 @@ class Toys extends Item {
         warranty = scanner.next();
         System.out.print("Enter the price: ");
         price = scanner.nextFloat();
+    }
+
+    @Override
+    public Item duplicate(){
+        return new Toys(this.type,this.warranty,this.price);
     }
 }
 

@@ -5,6 +5,8 @@ import java.util.*;
 public class shoppingItems {
     public static void main(String[] args) {
         List<Item> list = new ArrayList<>();
+        List<Item> duplicateList = new ArrayList<>();
+
         try (Scanner inFile = new Scanner(new File("shopping_list.txt"))) {
             while (inFile.hasNext()) {
                 String type = inFile.next();
@@ -16,7 +18,12 @@ public class shoppingItems {
                     case "Electronics":
                         item = new Electronics(inFile.next(), inFile.next(), inFile.nextFloat());
                         break;
-                    // Add cases for Clothing, Book, and Toys...
+                    case "Book":
+                        item = new Book(inFile.next(), inFile.next(), inFile.nextFloat());
+                    case "Clothing":
+                        item = new Clothing(inFile.next(), inFile.next(), inFile.nextFloat());
+                    case "Toys":
+                        item = new Toys(inFile.next(), inFile.next(), inFile.nextFloat());    
                 }
                 if (item != null) {
                     list.add(item);
@@ -27,7 +34,7 @@ public class shoppingItems {
         }
 
         try (Scanner scanner = new Scanner(System.in)) {
-            char choice;
+            char choice,duplicateChoice;
             do {
                 System.out.print("Add item (g = Grocery, e = Electronics, t = Toys, c = Clothing x = exit): ");
                 choice = scanner.next().charAt(0);
@@ -61,6 +68,13 @@ public class shoppingItems {
                 if (item != null) {
                     list.add(item);
                 }
+                System.out.println("Would you like to duplicate item?");
+                duplicateChoice = scanner.next().charAt(0);
+                
+                if(duplicateChoice == 'y'){
+                    duplicateList.add(item);
+                }
+
                 System.out.print("Do you want to add more items? (y/n): ");
                 choice = scanner.next().charAt(0);
             } while (choice == 'y');
@@ -68,6 +82,11 @@ public class shoppingItems {
 
         System.out.println("Current Shopping List:");
         for (Item item : list) {
+            item.display();
+        }
+        
+        System.out.println("Duplicated Items:");
+        for (Item item : duplicateList) {
             item.display();
         }
 
